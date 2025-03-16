@@ -1,1 +1,3 @@
 /home/midepeter/learning/Moniepoint/my-app/src/test/java/com/mycompany/app/AppTest.java
+/home/midepeter/learning/Moniepoint/my-app/src/test/java/com/mycompany/app/dao/BookDAOImplTest.java
+/home/midepeter/learning/Moniepoint/my-app/src/test/java/com/mycompany/app/dao/MemberDAOImplTest.java

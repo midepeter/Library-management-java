@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.app.dao.BookDAOImplTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.054 s <<< FAILURE! -- in com.mycompany.app.dao.BookDAOImplTest
+com.mycompany.app.dao.BookDAOImplTest.testGetAllBooksNoBookFound -- Time elapsed: 0.018 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.BookDAOImpl.getAllBooks(BookDAOImpl.java:65)
+	at com.mycompany.app.dao.BookDAOImplTest.testGetAllBooksNoBookFound(BookDAOImplTest.java:49)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.mycompany.app.dao.BookDAOImplTest.testAddBookSuccessful -- Time elapsed: 0.008 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.BookDAOImpl.addBook(BookDAOImpl.java:24)
+	at com.mycompany.app.dao.BookDAOImplTest.testAddBookSuccessful(BookDAOImplTest.java:17)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.mycompany.app.dao.BookDAOImplTest.testGetBookById -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.BookDAOImpl.addBook(BookDAOImpl.java:24)
+	at com.mycompany.app.dao.BookDAOImplTest.testGetBookById(BookDAOImplTest.java:58)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.mycompany.app.dao.BookDAOImplTest.testUpdateBookSuccessful -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.BookDAOImpl.updateBook(BookDAOImpl.java:38)
+	at com.mycompany.app.dao.BookDAOImplTest.testUpdateBookSuccessful(BookDAOImplTest.java:29)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.mycompany.app.dao.BookDAOImplTest.testDeleteBookSuccessful -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.BookDAOImpl.deleteBook(BookDAOImpl.java:53)
+	at com.mycompany.app.dao.BookDAOImplTest.testDeleteBookSuccessful(BookDAOImplTest.java:40)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+

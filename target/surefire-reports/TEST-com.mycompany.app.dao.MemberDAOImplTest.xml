@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="com.mycompany.app.AppTest" time="0.105" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="com.mycompany.app.dao.MemberDAOImplTest" time="0.027" tests="6" errors="6" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -51,5 +51,58 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="com.mycompany.app.AppTest" time="0.052"/>
+  <testcase name="testDeleteMemberSuccessful" classname="com.mycompany.app.dao.MemberDAOImplTest" time="0.005">
+    <error message="Cannot invoke &quot;java.sql.Connection.prepareStatement(String)&quot; because &quot;this.conn&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.MemberDAOImpl.deleteMember(MemberDAOImpl.java:49)
+	at com.mycompany.app.dao.MemberDAOImplTest.testDeleteMemberSuccessful(MemberDAOImplTest.java:54)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+  </testcase>
+  <testcase name="testUpdateMemberSuccessful" classname="com.mycompany.app.dao.MemberDAOImplTest" time="0.003">
+    <error message="Cannot invoke &quot;java.sql.Connection.prepareStatement(String)&quot; because &quot;this.conn&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.MemberDAOImpl.updateMember(MemberDAOImpl.java:35)
+	at com.mycompany.app.dao.MemberDAOImplTest.testUpdateMemberSuccessful(MemberDAOImplTest.java:41)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+  </testcase>
+  <testcase name="testGetMemberByIdNotFound" classname="com.mycompany.app.dao.MemberDAOImplTest" time="0.002">
+    <error message="Cannot invoke &quot;java.sql.Connection.prepareStatement(String)&quot; because &quot;this.conn&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.MemberDAOImpl.getMemberById(MemberDAOImpl.java:80)
+	at com.mycompany.app.dao.MemberDAOImplTest.testGetMemberByIdNotFound(MemberDAOImplTest.java:90)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+  </testcase>
+  <testcase name="testGetMemberById" classname="com.mycompany.app.dao.MemberDAOImplTest" time="0.002">
+    <error message="Cannot invoke &quot;java.sql.Connection.prepareStatement(String)&quot; because &quot;this.conn&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.MemberDAOImpl.addMember(MemberDAOImpl.java:22)
+	at com.mycompany.app.dao.MemberDAOImplTest.testGetMemberById(MemberDAOImplTest.java:76)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+  </testcase>
+  <testcase name="testGetAllMembersNoMemberFound" classname="com.mycompany.app.dao.MemberDAOImplTest" time="0.004">
+    <error message="Cannot invoke &quot;java.sql.Connection.prepareStatement(String)&quot; because &quot;this.conn&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.MemberDAOImpl.getAllMembers(MemberDAOImpl.java:61)
+	at com.mycompany.app.dao.MemberDAOImplTest.testGetAllMembersNoMemberFound(MemberDAOImplTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+  </testcase>
+  <testcase name="testAddMemberSuccessful" classname="com.mycompany.app.dao.MemberDAOImplTest" time="0.002">
+    <error message="Cannot invoke &quot;java.sql.Connection.prepareStatement(String)&quot; because &quot;this.conn&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.MemberDAOImpl.addMember(MemberDAOImpl.java:22)
+	at com.mycompany.app.dao.MemberDAOImplTest.testAddMemberSuccessful(MemberDAOImplTest.java:23)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+  </testcase>
 </testsuite>

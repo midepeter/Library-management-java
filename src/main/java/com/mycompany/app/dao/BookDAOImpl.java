@@ -12,14 +12,13 @@ import com.mycompany.app.domain.Book;
 
 public class BookDAOImpl implements BookDAO {
     private final List<Book> books = new ArrayList<>();
-    private final Connection conn;
+    public final Connection conn;
 
     public BookDAOImpl(Connection conn) {
         this.conn = conn;
     }
 
     @Override
-    @SuppressWarnings("CallToPrintStackTrace")
     public void addBook(Book book) {
          String sql = "INSERT INTO books (title, author, genre, available_copies) VALUES (?, ?, ?, ?)";
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -35,24 +34,31 @@ public class BookDAOImpl implements BookDAO {
 
     @Override
     public void updateBook(Book book) {
-        for (int i = 0; i < books.size(); i++) {
-            if (books.get(i).getBookId() == book.getBookId()) {
-                books.set(i, book);
-                System.out.println("Book updated: " + book);
-                return;
-            }
+        String sql = "UPDATE books SET title = ?, author = ?, genre = ?, available_copies = ? WHERE book_id = ?";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, book.getTitle());
+            pstmt.setString(2, book.getAuthor());
+            pstmt.setString(3, book.getGenre());
+            pstmt.setInt(4, book.getAvailableCopies());
+            pstmt.setInt(5, book.getBookId());
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        System.out.println("Book not found for update.");
     }
 
     @Override
     public void deleteBook(int bookId) {
-        books.removeIf(book -> book.getBookId() == bookId);
-        System.out.println("Book with ID " + bookId + " deleted.");
+        String sql = "DELETE FROM books WHERE book_id = ?";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, bookId);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
-    @SuppressWarnings("CallToPrintStackTrace")
     public List<Book> getAllBooks() {
         List<Book> bookList = new ArrayList<>();
         String sql = "SELECT * FROM books";
@@ -82,6 +88,23 @@ public class BookDAOImpl implements BookDAO {
 
     @Override
     public Book getBookById(int bookId) {
-        return books.stream().filter(book -> book.getBookId() == bookId).findFirst().orElse(null);
+        String sql = "SELECT * FROM books WHERE book_id = ?";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, bookId);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    return new Book(
+                        rs.getInt("book_id"),
+                        rs.getString("title"),
+                        rs.getString("author"),
+                        rs.getString("genre"),
+                        rs.getInt("available_copies")
+                    );
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

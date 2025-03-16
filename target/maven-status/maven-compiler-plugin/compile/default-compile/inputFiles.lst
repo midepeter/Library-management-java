@@ -3,6 +3,7 @@
 /home/midepeter/learning/Moniepoint/my-app/src/main/java/com/mycompany/app/dao/BookDAOImpl.java
 /home/midepeter/learning/Moniepoint/my-app/src/main/java/com/mycompany/app/dao/BorrowingDAO.java
 /home/midepeter/learning/Moniepoint/my-app/src/main/java/com/mycompany/app/dao/BorrowingDAOImpl.java
+/home/midepeter/learning/Moniepoint/my-app/src/main/java/com/mycompany/app/dao/Library.java
 /home/midepeter/learning/Moniepoint/my-app/src/main/java/com/mycompany/app/dao/MemberDAO.java
 /home/midepeter/learning/Moniepoint/my-app/src/main/java/com/mycompany/app/dao/MemberDAOImpl.java
 /home/midepeter/learning/Moniepoint/my-app/src/main/java/com/mycompany/app/domain/Book.java
@@ -10,3 +11,5 @@
 /home/midepeter/learning/Moniepoint/my-app/src/main/java/com/mycompany/app/domain/Member.java
 /home/midepeter/learning/Moniepoint/my-app/src/main/java/com/mycompany/app/exporter/DataExporter.java
 /home/midepeter/learning/Moniepoint/my-app/src/main/java/com/mycompany/app/logger/Logger.java
+/home/midepeter/learning/Moniepoint/my-app/src/main/java/com/mycompany/app/utils/HibernateGenericResultBuilder.java
+/home/midepeter/learning/Moniepoint/my-app/src/main/java/com/mycompany/app/utils/ResultBuilder.java
