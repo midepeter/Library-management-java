@@ -24,7 +24,6 @@ public class App {
 
         public static void main(String[] args) throws ClassNotFoundException, SQLException {
         Logger logger = new Logger();
-        DataExporter exporter = new DataExporter();
         logger.logActivity("Library system started.");
 
         
@@ -70,6 +69,7 @@ public class App {
     }
 }
 
+@SuppressWarnings("CallToPrintStackTrace")
 class ConnPool {
     private static final int POOL_SIZE = 5;
     private static final BlockingQueue<Connection> connectionPool = new ArrayBlockingQueue<>(POOL_SIZE);

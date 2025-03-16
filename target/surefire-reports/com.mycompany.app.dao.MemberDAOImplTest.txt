@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.app.dao.MemberDAOImplTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.027 s <<< FAILURE! -- in com.mycompany.app.dao.MemberDAOImplTest
+com.mycompany.app.dao.MemberDAOImplTest.testDeleteMemberSuccessful -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.MemberDAOImpl.deleteMember(MemberDAOImpl.java:49)
+	at com.mycompany.app.dao.MemberDAOImplTest.testDeleteMemberSuccessful(MemberDAOImplTest.java:54)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.mycompany.app.dao.MemberDAOImplTest.testUpdateMemberSuccessful -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.MemberDAOImpl.updateMember(MemberDAOImpl.java:35)
+	at com.mycompany.app.dao.MemberDAOImplTest.testUpdateMemberSuccessful(MemberDAOImplTest.java:41)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.mycompany.app.dao.MemberDAOImplTest.testGetMemberByIdNotFound -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.MemberDAOImpl.getMemberById(MemberDAOImpl.java:80)
+	at com.mycompany.app.dao.MemberDAOImplTest.testGetMemberByIdNotFound(MemberDAOImplTest.java:90)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.mycompany.app.dao.MemberDAOImplTest.testGetMemberById -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.MemberDAOImpl.addMember(MemberDAOImpl.java:22)
+	at com.mycompany.app.dao.MemberDAOImplTest.testGetMemberById(MemberDAOImplTest.java:76)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.mycompany.app.dao.MemberDAOImplTest.testGetAllMembersNoMemberFound -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.MemberDAOImpl.getAllMembers(MemberDAOImpl.java:61)
+	at com.mycompany.app.dao.MemberDAOImplTest.testGetAllMembersNoMemberFound(MemberDAOImplTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.mycompany.app.dao.MemberDAOImplTest.testAddMemberSuccessful -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.conn" is null
+	at com.mycompany.app.dao.MemberDAOImpl.addMember(MemberDAOImpl.java:22)
+	at com.mycompany.app.dao.MemberDAOImplTest.testAddMemberSuccessful(MemberDAOImplTest.java:23)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
