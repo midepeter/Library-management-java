@@ -5,3 +5,15 @@ Sun Mar 16 06:26:57 WAT 2025 - Add member to the database.
 Sun Mar 16 06:26:57 WAT 2025 - Get all members from the database.
 Sun Mar 16 06:26:57 WAT 2025 - Exporting members to CSV file.
 Sun Mar 16 06:26:57 WAT 2025 - Library maagement system shutdown.
+Mon Mar 17 07:02:58 WAT 2025 - Library system started.
+Mon Mar 17 07:03:02 WAT 2025 - Error: Index 1 out of bounds for length 1
+Mon Mar 17 07:03:30 WAT 2025 - Library system started.
+Mon Mar 17 07:03:32 WAT 2025 - Error: Index 1 out of bounds for length 1
+Mon Mar 17 07:04:01 WAT 2025 - Library system started.
+Mon Mar 17 07:04:07 WAT 2025 - Added new book: My
+Mon Mar 17 07:04:57 WAT 2025 - Library system started.
+Mon Mar 17 07:05:05 WAT 2025 - Added new book: my
+Mon Mar 17 07:05:24 WAT 2025 - Error: Index 4 out of bounds for length 4
+Mon Mar 17 07:05:51 WAT 2025 - Added new book: the
+Mon Mar 17 07:09:42 WAT 2025 - Library system started.
+Mon Mar 17 07:09:50 WAT 2025 - Exported books to CSV

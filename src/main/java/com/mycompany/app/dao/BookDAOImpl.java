@@ -84,4 +84,10 @@ public class BookDAOImpl implements BookDAO {
     public Book getBookById(int bookId) {
         return books.stream().filter(book -> book.getBookId() == bookId).findFirst().orElse(null);
     }
+
+    @Override
+    public List<Book> searchBook(String keyword) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'searchBook'");
+    }
 }
