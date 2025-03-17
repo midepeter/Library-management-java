@@ -10,4 +10,5 @@ public interface BookDAO {
     void deleteBook(int bookId);
     List<Book> getAllBooks();
     Book getBookById(int bookId);
+    List<Book> searchBook(String keyword);
 }

@@ -1,11 +1,31 @@
 package com.mycompany.app.domain;
 
+import java.sql.Date;
+
 public class Borrowing {
     private int recordId;
     private int bookId;
     private int memberId;
     private String borrowDate;
     private String returnDate;
+
+    public Borrowing(int recordId, int bookId, int memberId, String borrowDate, String returnDate) {
+        this.recordId = recordId;
+        this.bookId = bookId;
+        this.memberId = memberId;
+        this.borrowDate = borrowDate;
+        this.returnDate = returnDate;
+    }
+
+    public Borrowing(int bookId, int memberId, String borrowDate) {
+        this.bookId = bookId;
+        this.memberId = memberId;
+        this.borrowDate = borrowDate;
+    }
+
+    public Borrowing(int int1, int int2, Date date) {
+        //TODO Auto-generated constructor stub
+    }
 
     public int getRecordId() {
         return recordId;

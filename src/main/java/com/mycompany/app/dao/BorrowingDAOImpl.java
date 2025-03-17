@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.mycompany.app.domain.Borrowing;
+
 
 public class BorrowingDAOImpl implements BorrowingDAO {
     private final Connection conn;
@@ -42,21 +44,64 @@ public class BorrowingDAOImpl implements BorrowingDAO {
     }
 
     @Override
-    public List<String> getBorrowedBooks(int memberId) {
+    public List<Borrowing> getAllBorrowings() {
+        String sql = "SELECT * FROM borrow_records";
+        List<Borrowing> borrowings = new ArrayList<>();
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                Borrowing borrowing = new Borrowing(
+                    rs.getInt("member_id"),
+                    rs.getInt("book_id"),
+                    rs.getDate("borrow_date")
+                );
+                borrowings.add(borrowing);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error getting all borrowings", e);
+        }
+        return borrowings;
+    }
+
+    @Override
+    public List<Borrowing> getBorrowingsByBookId(int bookId) {
+        String sql = "SELECT * FROM borrow_records WHERE book_id = ?";
+        List<Borrowing> borrowings = new ArrayList<>();
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, bookId);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                Borrowing borrowing = new Borrowing(
+                    rs.getInt("member_id"),
+                    rs.getInt("book_id"),
+                    rs.getDate("borrow_date")
+                );
+                borrowings.add(borrowing);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error getting borrowings by book ID", e);
+        }
+        return borrowings;
+    }
+
+    @Override 
+    public List<Borrowing> getBorrowingsByMemberId(int memberId) {
         String sql = "SELECT * FROM borrow_records WHERE member_id = ?";
-        List<String> borrowedBooks = new ArrayList<>();
+        List<Borrowing> borrowings = new ArrayList<>();
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, memberId);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
-                String record = rs.getInt("member_id") + "," + 
-                              rs.getInt("book_id") + "," + 
-                              rs.getDate("borrow_date");
-                borrowedBooks.add(record);
+                Borrowing borrowing = new Borrowing(
+                    rs.getInt("member_id"),
+                    rs.getInt("book_id"),
+                    rs.getDate("borrow_date")
+                );
+                borrowings.add(borrowing);
             }
         } catch (SQLException e) {
-            throw new RuntimeException("Error getting borrowed books", e);
+            throw new RuntimeException("Error getting borrowings by member ID", e);
         }
-        return borrowedBooks;
+        return borrowings;
     }
 }
